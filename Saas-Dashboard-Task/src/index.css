@@ -1,0 +1,26 @@
+:root {
+  --dark-purple:#3B1144;
+  --light-purple:#60246A;
+  --primary:#121317;
+  --background:#000000;
+  --light-aqua:#67daf1;
+  --mid-aqua:#428998;
+  --dark-aqua:#203339;
+  --button-hover:#F6F6F6;
+  --unlock:#4e4f52;
+  --unlock-tile:#353638;
+  --map-grey:#303133;
+  --primary-font:#E3E5E6;
+  --secondary-font:#8c8c8c;
+}
+body{
+  background-color:#C5BCE4;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding:0;
+  margin:0;
+
+}

@@ -1,0 +1,109 @@
+.sidebar-wrapper {
+  height: 100%;
+  width: 15%;
+  min-width: 200px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-container {
+  width: 100%;
+  height: 95%;
+  font-family: 'sora sans-serif';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+.logo {
+  max-width: 30px;
+  height: 30px;
+}
+.header {
+  width: 50%;
+  height: 30px;
+  /* background-color: lightgreen; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Sora', sans-serif;
+  font-size: 14pt;
+  font-weight: 500;
+  color: var(--primary-font);
+  margin-bottom: 50px;
+}
+.menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.menu > a {
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--primary-font);
+  font-weight: 300;
+}
+.menu span {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  font-family: 'sora';
+  font-size: 12pt;
+}
+span > img {
+  width: 18px;
+  margin-right: 15px;
+}
+span > i {
+  width: 18px;
+  margin-right: 15px;
+}
+.new-features {
+  width: 80%;
+  height: 200px;
+  background-color: var(--unlock-tile);
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'sora';
+  padding-top: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+.new-features > h3 {
+  text-align: center;
+  color: var(--primary-font);
+  font-weight: 500;
+}
+.new-features > button {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  font-family: 'Sora';
+}
+.unlock {
+  position: absolute;
+  top: -20px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--unlock);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: var(--primary-font);
+}
+.settings {
+  margin-top: 50px;
+}
+.sidebar-container::-webkit-scrollbar {
+  display: none;
+}
