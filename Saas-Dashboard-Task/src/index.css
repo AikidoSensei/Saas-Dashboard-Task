@@ -1,9 +1,9 @@
 :root {
   --dark-purple:#3B1144;
-  --light-purple:#60246A;
+  --light-purple:#9c249c;
   --primary:#121317;
   --background:#000000;
-  --light-aqua:#67daf1;
+  --light-aqua:#6cd5f1;
   --mid-aqua:#428998;
   --dark-aqua:#203339;
   --button-hover:#F6F6F6;
@@ -12,6 +12,10 @@
   --map-grey:#303133;
   --primary-font:#E3E5E6;
   --secondary-font:#8c8c8c;
+  --tile-height:300px;
+  --tile-border:10px;
+  --dropdown:#3a3c3e;
+  --chart-line:#8c8c8c5b;
 }
 body{
   background-color:#C5BCE4;

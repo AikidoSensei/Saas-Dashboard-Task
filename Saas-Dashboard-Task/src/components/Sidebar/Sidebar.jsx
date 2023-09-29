@@ -58,7 +58,7 @@ const Sidebar = () => {
           <h3>
             Unlock new <br /> features
           </h3>
-          <button>Get pro now</button>
+          <button className='button'>Get pro now</button>
           <div className='unlock'>
             <i className='fa-solid fa-unlock fa-flip-horizontal'></i>
           </div>

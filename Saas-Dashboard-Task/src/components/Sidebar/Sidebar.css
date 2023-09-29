@@ -82,7 +82,7 @@ span > i {
   color: var(--primary-font);
   font-weight: 500;
 }
-.new-features > button {
+.button {
   width: 120px;
   height: 40px;
   border-radius: 20px;

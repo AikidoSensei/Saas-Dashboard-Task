@@ -1,6 +1,10 @@
 import React from 'react'
 import './Main.css'
 import profile from '../../assets/profile.jpg'
+
+import SalesReport from './MicroComponents/SalesReport'
+import AiAnalytics from './MicroComponents/AiAnalytics'
+import SalesTime from './MicroComponents/SalesTime'
 const Main = () => {
   return (
     <div className='main-wrapper'>
@@ -21,15 +25,24 @@ const Main = () => {
             Welcome back, <span>Jessica!</span>
           </h1>
           <div className='options'>
-            <a href=''>
+            <a href='#'>
               <i className='fa-solid fa-plus add'></i>Add new widget
             </a>
-            <a href=''>
+            <a href='#'>
               <i className='fa-solid fa-download export'/>Export reports
             </a>
           </div>
         </section>
-        <section className='main-content'></section>
+        <section className='main-content'>
+          <div className="top-content">
+            {/* responsive chart */}
+            <SalesReport/>
+            <AiAnalytics/>
+          </div>
+          <div className="bottom-content">
+            <SalesTime/>
+          </div>
+        </section>
       </div>
     </div>
   )
