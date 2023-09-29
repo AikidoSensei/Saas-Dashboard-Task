@@ -89,6 +89,7 @@ const AddWidget = () => {
               drag
               whileDrag={{ scale: 0.9 }}
               dragSnapToOrigin={true}
+              dragConstraints={{ left: 100, right: 100 }}
               animate={{
                 opacity: mouseOut === true && drag === true ? '0' : '1',
               }}
@@ -103,6 +104,7 @@ const AddWidget = () => {
               drag
               whileDrag={{ scale: 0.9 }}
               dragSnapToOrigin={true}
+              dragConstraints={{ left: 100, right: 100 }}
               animate={{
                 opacity: mouseOut === true && drag === true ? '0' : '1',
               }}
@@ -118,6 +120,7 @@ const AddWidget = () => {
               drag
               whileDrag={{ scale: 0.9 }}
               dragSnapToOrigin={true}
+              dragConstraints={{ left: 100, right: 100 }}
               animate={{
                 opacity: mouseOut === true && drag === true ? '0' : '1',
               }}
@@ -132,6 +135,7 @@ const AddWidget = () => {
               drag
               whileDrag={{ scale: 0.9 }}
               dragSnapToOrigin={true}
+              dragConstraints={{ left: 100, right: 100 }}
               animate={{
                 opacity: mouseOut === true && drag === true ? '0' : '1',
               }}
@@ -146,6 +150,7 @@ const AddWidget = () => {
               drag
               whileDrag={{ scale: 0.9 }}
               dragSnapToOrigin={true}
+              dragConstraints={{ left: 100, right: 100 }}
               animate={{
                 opacity: mouseOut === true && drag === true ? '0' : '1',
               }}
@@ -159,8 +164,7 @@ const AddWidget = () => {
               className='widget'
               drag
               whileDrag={{ scale: 0.9 }}
-
-              onDrag={(event, info) => console.log(info.point.x, info.point.y)}
+             
               onMouseDown={() => {
                 dispatch(dragging(true))
               }}
@@ -169,7 +173,6 @@ const AddWidget = () => {
                 dispatch(dragging(false))
                 dispatch(mouseout(false))
                 dispatch(toggleWidget())
-               
               }}
               animate={{
                 opacity: mouseOut === true && drag === true ? '1000' : '10',
@@ -177,7 +180,7 @@ const AddWidget = () => {
             >
               <div className='widget-image'>
                 <img src={toggle ? lines : map} alt='lines' />
-                <p>{toggle ? 'Payment History': 'Sales by Location' }</p>
+                <p>{toggle ? 'Payment History' : 'Sales by Location'}</p>
               </div>
             </motion.div>
           </div>
