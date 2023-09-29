@@ -4,7 +4,6 @@ const SalesTime = () => {
   let grid = []
    for (let i = 0; i < 49; i++) {
     const rand = Math.floor(Math.random() * 49)
-    console.log(rand, i);
     grid.push({index:i+1, rand: rand})
    }
   return (
@@ -37,10 +36,11 @@ const SalesTime = () => {
         </div>
       </div>
       <div className='time-grid'>
-       {grid.map((n)=>{
+       {grid.map((n, index)=>{
         return (
          <div className="box" 
          style={{backgroundColor:n.rand % 3 === 1 ? 'var(--dark-aqua)': n.rand % 2 === 0 ? 'var(--mid-aqua)' : 'var(--light-aqua)'}}
+         key={index}
          >
 
          </div>

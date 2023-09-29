@@ -1,0 +1,112 @@
+.widget-wrapper{
+ position: absolute;
+ top:0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ z-index: 2000;
+ background-color: var(--slate);
+}
+.widget-container{
+ width:50%;
+ min-height: 550px;
+ background-color: var(--primary);
+ display: flex;
+ flex-direction: column;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ border-radius: 15px;
+ border: solid 1px var(--chart-line);
+}
+.cancel-btn{
+ position: absolute;
+ top:10px;
+ right: 10px;
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ transition: 0.3s;
+ cursor: pointer;
+ color:var(--primary-font)
+}
+.cancel-btn:hover{
+ background-color: var(--unlock);
+}
+.widget-content{
+ display: flex;
+ align-items: center;
+ flex-direction: column;
+ text-align: center;
+ width: 90%;
+ height: auto;
+ color:var(--primary-font);
+ font-family: 'sora';
+}
+.widget-content p{
+ font-size: 11pt;
+ color: var(--secondary-font);
+}
+.widget-content h1{
+ font-weight: 400;
+}
+.show-more{
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ padding-block: 30px;
+ margin-top: 10px;
+}
+.more-content{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 17%;
+ cursor: pointer;
+ 
+}
+.widget-collection{
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ flex-wrap: wrap;
+ width: 100%;
+ height: auto;
+ gap:10px;
+}
+.widget{
+ width:190px;
+ max-width: 90%;
+ height: 140px;
+ border-radius: 5px;
+  border: solid 1px var(--chart-line);
+  cursor:pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+}
+.widget:hover{
+ background-color: var(--map-grey);
+}
+.widget:active{
+ background-color: var(--map-grey);
+}
+.widget-image{
+ width:90%;
+;
+}
+.widget-image img{
+ width: 50%;
+ transform: translateY(20px);
+ pointer-events: none;
+}

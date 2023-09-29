@@ -54,35 +54,37 @@ export const week = [
  { name: 'Fri', earnings: 90, marketing: 1200 },
  { name: 'Sat', earnings: 95, marketing: 650 },
 ]
-export const boxes = [
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-  { colour: 'var(--dark-aqua)' },
-]
+export const countries = [
+    { country: "cn", value: 1389618778 }, // china
+    { country: "in", value: 1311559204 }, // india
+    { country: "us", value: 331883986 }, // united states
+    { country: "id", value: 264935824 }, // indonesia
+    { country: "pk", value: 210797836 }, // pakistan
+    { country: "br", value: 210301591 }, // brazil
+    { country: "ng", value: 208679114 }, // nigeria
+    { country: "bd", value: 161062905 }, // bangladesh
+    { country: "ru", value: 141944641 }, // russia
+    { country: "mx", value: 127318112 }, // mexico
+  ];
+export const myInvoice = [
+    {
+      invoice: '#6709',
+      price: '$146.00',
+      date: 'March 12',
+      status: 'Completed',
+    },
+    {
+      invoice: '#6708',
+      price: '$280.00',
+      date: 'March 12',
+      status: 'Completed',
+    },
+    { invoice: '#6707', price: '$185.00', date: 'March 12', status: 'Pending' },
+    { invoice: '#6706', price: '$146.00', date: 'March 11', status: 'Failed' },
+    {
+      invoice: '#6705',
+      price: '$225.00',
+      date: 'March 11',
+      status: 'Completed',
+    },
+  ]
