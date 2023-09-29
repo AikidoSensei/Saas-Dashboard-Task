@@ -107,3 +107,13 @@ span > i {
 .sidebar-container::-webkit-scrollbar {
   display: none;
 }
+.mobile-sidebar{
+  
+}
+/* RESPONSIVE */
+@media screen and (max-width:1000px){
+ .sidebar-wrapper{
+ display: none;
+  z-index: 1500;
+ }
+}

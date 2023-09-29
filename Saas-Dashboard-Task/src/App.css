@@ -1,13 +1,13 @@
 .dashboard{
  background-color: var(--background);
- width:90vw;
+ width:100vw;
  border-radius: 20px;
- height: 95vh;
+ height: 100vh;
  overflow: hidden;
  display: flex;
 }
 @media screen and (max-width:400px) {
- .dashboard{
+ /* .dashboard{
   width:100%;
- }
+ } */
 }

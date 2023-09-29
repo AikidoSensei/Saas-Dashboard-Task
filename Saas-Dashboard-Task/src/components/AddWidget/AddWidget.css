@@ -110,3 +110,9 @@
  transform: translateY(20px);
  pointer-events: none;
 }
+/* RESPONSIVE */
+@media screen and (max-width:1000px){
+ .widget-container{
+  width: 80%;
+ }
+}

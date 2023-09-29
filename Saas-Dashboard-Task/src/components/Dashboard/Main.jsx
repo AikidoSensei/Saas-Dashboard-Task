@@ -34,6 +34,7 @@ const Main = () => {
             <input type='text' placeholder='search some data' />
           </div>
           <div className='control-center'>
+            <i className='fa-solid fa-arrow-right-to-bracket'/>
             <i className='fa-regular fa-moon' />
             <i className='fa-regular fa-bell' />
             <img src={profile} alt='profile' />
@@ -89,7 +90,7 @@ const Main = () => {
                   transition={{ duration: 0.5 }}
                 ></motion.div>
               )}
-              {toggle ? <SalesLocation/> : <PaymentHistory />}
+              {toggle ? <SalesLocation /> : <PaymentHistory />}
             </motion.div>
           </div>
         </section>
