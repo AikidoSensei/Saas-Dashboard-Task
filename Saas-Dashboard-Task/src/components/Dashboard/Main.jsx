@@ -9,10 +9,10 @@ import SalesTime from './MicroComponents/SalesTime'
 import SalesLocation from './MicroComponents/SalesLocation'
 import PaymentHistory from './MicroComponents/PaymentHistory'
 import AddWidget from '../AddWidget/AddWidget'
-import { viewWidget, toggleWidget } from '../../features/UXSlice'
+import { viewWidget, toggleWidget, toggleSidebar, closeSidebar} from '../../features/UXSlice'
 import { useSelector, useDispatch } from 'react-redux'
 const Main = () => {
-  const {showWidget, drag, mouseOut, toggle} = useSelector((state) => state.ux)
+  const {showWidget, drag, mouseOut, toggle, showSidebar} = useSelector((state) => state.ux)
 
   const [smooth, setSmooth] =useState(true)
   const dispatch = useDispatch()
@@ -20,9 +20,9 @@ const Main = () => {
   
 
 
-
   window.addEventListener('click', ()=>{
     dispatch(viewWidget(false))
+    dispatch(closeSidebar())
   })
   return (
     <div className='main-wrapper'>
@@ -34,7 +34,10 @@ const Main = () => {
             <input type='text' placeholder='search some data' />
           </div>
           <div className='control-center'>
-            <i className='fa-solid fa-arrow-right-to-bracket'/>
+            <i className='fa-solid fa-arrow-right-to-bracket' onClick={(e)=>{
+              e.stopPropagation()
+              dispatch(toggleSidebar())
+            }}/>
             <i className='fa-regular fa-moon' />
             <i className='fa-regular fa-bell' />
             <img src={profile} alt='profile' />

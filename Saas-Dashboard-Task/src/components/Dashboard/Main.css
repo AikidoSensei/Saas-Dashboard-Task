@@ -742,3 +742,8 @@
   display: none;
 }
 }
+@media screen and (min-width:1000px) {
+  .control-center>:first-child{
+    display:none
+  }
+}

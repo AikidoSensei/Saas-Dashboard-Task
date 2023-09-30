@@ -4,7 +4,8 @@ const initialState = {
   drag: false,
   mouseOut:false,
   showWidget:false,
-  toggle:true
+  toggle:true,
+  showSidebar:false
 }
 
 const UxSlice = createSlice({
@@ -27,9 +28,15 @@ const UxSlice = createSlice({
    },
    toggleWidget:(state)=>{
     state.toggle = !state.toggle
-   }
+   },
+   toggleSidebar:(state)=>{
+    state.showSidebar = !state.showSidebar;
+   },
+   closeSidebar:(state)=>{
+    state.showSidebar = false
+   },
   },
 })
-export const { dragging, mouseout, viewWidget, close, toggleWidget } = UxSlice.actions
+export const { dragging, mouseout, viewWidget, close, toggleWidget, toggleSidebar, closeSidebar } = UxSlice.actions
 
 export default UxSlice.reducer

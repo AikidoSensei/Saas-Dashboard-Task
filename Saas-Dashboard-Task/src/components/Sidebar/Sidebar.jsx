@@ -2,9 +2,17 @@ import React from 'react'
 import './Sidebar.css'
 import logo from '../../assets/logo.png'
 import overview from '../../assets/overview.png'
+import { useSelector } from 'react-redux'
 const Sidebar = () => {
+   const { showSidebar } = useSelector(
+     (state) => state.ux
+   )
   return (
-    <div className='sidebar-wrapper'>
+    <div className={showSidebar ?'show sidebar-wrapper':'sidebar-wrapper'} onClick={
+      (e)=>{
+        e.stopPropagation()
+      }
+    }>
       <div className='sidebar-container'>
         <section className='header'>
           <img src={logo} className='logo' alt='logo' />
@@ -63,7 +71,7 @@ const Sidebar = () => {
             <i className='fa-solid fa-unlock fa-flip-horizontal'></i>
           </div>
         </section>
-        <section className='menu settings'>
+        <section className=' settings'>
           <a href=''>
             <span>
               <i className='fa-solid fa-gear'></i>
