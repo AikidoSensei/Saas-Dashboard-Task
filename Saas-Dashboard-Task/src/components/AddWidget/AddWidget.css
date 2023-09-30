@@ -55,6 +55,9 @@
  color: var(--secondary-font);
 }
 .widget-content h1{
+  font-size: clamp(15pt, 2.5vw, 22pt);
+}
+.widget-content h1{
  font-weight: 400;
 }
 .show-more{
@@ -133,6 +136,12 @@
  height: 300px;
  gap:10px;
  overflow-y: scroll;
+}
+.more-content{
+  width: 30%;
+}
+.widget-content p{
+ font-size: 8pt;
 }
 }
 /* CHECK */
