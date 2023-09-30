@@ -174,10 +174,15 @@ const AddWidget = () => {
                 drag
                 whileDrag={{ scale: 0.9 }}
                 dragConstraints={{ left: 200, right: 200 }}
+                dragSnapToOrigin={true}
+                dragTransition={{ bounceStiffness: 100, bounceDamping: 30 }}
                 onMouseDown={() => {
                   dispatch(dragging(true))
                 }}
                 onMouseUp={() => {
+                  if (!mouseOut === true) {
+                    return
+                  }
                   dispatch(viewWidget(false))
                   dispatch(dragging(false))
                   dispatch(mouseout(false))

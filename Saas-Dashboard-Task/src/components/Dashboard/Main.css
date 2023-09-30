@@ -53,10 +53,10 @@
   font-size: 15pt;
   color: var(--secondary-font);
 }
-.control-center > :nth-child(2) {
+.control-center > :nth-child(3) {
   position: relative;
 }
-.control-center > :nth-child(2)::after {
+.control-center > :nth-child(3)::after {
   content: '';
   position: absolute;
   left: 12px;
@@ -747,3 +747,7 @@
     display:none
   }
 }
+@media screen and (min-width:1500px) {
+  .sales-report{}
+}
+

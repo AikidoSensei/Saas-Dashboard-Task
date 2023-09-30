@@ -93,7 +93,7 @@ const Main = () => {
                   transition={{ duration: 0.5 }}
                 ></motion.div>
               )}
-              {toggle ? <SalesLocation /> : <PaymentHistory />}
+              {toggle && mouseOut ? <SalesLocation /> : <PaymentHistory />}
             </motion.div>
           </div>
         </section>

@@ -1,11 +1,19 @@
 import React from 'react'
-import { ResponsiveContainer, CartesianGrid, Line, LineChart, XAxis, YAxis, Brush } from 'recharts'
-import { useState, useEffect } from "react";
-import { useAnimate, stagger, motion } from "framer-motion";
+import {
+  ResponsiveContainer,
+  CartesianGrid,
+  Line,
+  LineChart,
+  XAxis,
+  YAxis,
+  Brush,
+} from 'recharts'
+import { useState, useEffect } from 'react'
+import { useAnimate, stagger, motion } from 'framer-motion'
 import ScrollContainer from 'react-indiana-drag-scroll'
-import {year, month, week} from '../../../assets/data.jsx'
-import Yaxis from './Yaxis.jsx';
- 
+import { year, month, week } from '../../../assets/data.jsx'
+import Yaxis from './Yaxis.jsx'
+
 const staggerMenuItems = stagger(0.1, { startDelay: 0.15 })
 
 function useMenuAnimation(isOpen) {
@@ -44,10 +52,33 @@ function useMenuAnimation(isOpen) {
 }
 
 const SalesReport = () => {
- const [isOpen, setIsOpen] = useState(false)
- const scope = useMenuAnimation(isOpen)
- const [date, setDate] = useState('year');
- window.addEventListener('click',()=> setIsOpen(false))
+  const [isOpen, setIsOpen] = useState(false)
+  const scope = useMenuAnimation(isOpen)
+  const [date, setDate] = useState('year')
+  const [screen, setScreen] = useState(1300)
+  const [screen2, setScreen2] = useState(700)
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      console.log(screen)
+       setScreen(920)
+       setScreen2(350)
+       return
+     }  
+    if (window.innerWidth > 1366) {
+      setScreen(1400)
+      setScreen2(850);
+      return;
+    }
+    else if (window.innerWidth <=820){
+      setScreen(1200)
+      setScreen2(550);
+      return;
+    }
+ 
+    
+    else {setScreen(1300); setScreen2(700)}
+  }, [window.innerWidth])
+  window.addEventListener('click', () => setIsOpen(false))
   return (
     <div className='sales-report'>
       <div className='sales-control'>
@@ -55,14 +86,18 @@ const SalesReport = () => {
         <div className='report-options'>
           <p>Earnings</p>
           <p>Marketing</p>
-          <div className='dropdown' onClick={(e)=>e.stopPropagation()} ref={scope}>
+          <div
+            className='dropdown'
+            onClick={(e) => e.stopPropagation()}
+            ref={scope}
+          >
             <motion.button
               whileTap={{ scale: 0.97 }}
               onClick={() => setIsOpen(!isOpen)}
             >
               {date}
               <div className='arrow' style={{ transformOrigin: '50% 55%' }}>
-                <i className="fa-solid fa-chevron-down"/>
+                <i className='fa-solid fa-chevron-down' />
               </div>
             </motion.button>
             <div
@@ -109,12 +144,20 @@ const SalesReport = () => {
         </div>
       </div>
       <Yaxis mode={date} />
-      <ScrollContainer className='chart' vertical={false} 
-      onClick={()=>setIsOpen(false)} 
+      <ScrollContainer
+        className='chart'
+        vertical={false}
+        onClick={() => setIsOpen(false)}
       >
-        <ResponsiveContainer width={date === 'month' ? 1200 : 650}>
+        <ResponsiveContainer
+          width={
+            date === 'month'
+              ? screen
+              : screen2
+          }
+        >
           <LineChart
-            width={650}
+            width={700}
             height={150}
             data={
               date === 'year'
